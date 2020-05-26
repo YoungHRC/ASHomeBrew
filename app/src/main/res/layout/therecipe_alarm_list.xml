@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?><!-- item_feed.xml -->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    card_view:cardCornerRadius="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/AlarmBar"
+            android:layout_width="match_parent"
+            android:background="@color/colorPrimaryDark"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_centerHorizontal="true"
+                android:gravity="left"
+                android:weightSum="1"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp">
+                <!--TODO: change to dropdown-->
+                <TextView
+                    android:id="@+id/alarmName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:layout_weight=".98"
+                    android:textSize="25dp"
+                    android:textColor="@color/white"
+                    android:padding="5dp"
+                    tools:text="ALARM 1" />
+                    <!--android:width="290dp"-->
+
+                <ImageButton
+                    android:id="@+id/deleteAlarm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:gravity="end"
+                    android:padding="5dp"
+                    android:layout_weight=".02"
+                    android:src="@drawable/ic_delete_black_24dp" />
+                <ImageButton
+                    android:id="@+id/editAlarm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:padding="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="end"
+                    android:src="@drawable/ic_edit_black_24dp" />
+            </LinearLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ingrChildList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/inputSearch"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textColor="@color/colorPrimaryDark"-->
+<!--                android:textSize="20dp" />-->
+<!--            <ImageButton-->
+<!--                android:id="@+id/btn_add"-->
+<!--                android:layout_width="30dp"-->
+<!--                android:layout_height="35dp"-->
+<!--                android:layout_alignRight="@+id/inputSearch"-->
+<!--                android:layout_marginRight="5dp"-->
+<!--                android:background="@drawable/ic_add_black_24dp"-->
+<!--                android:visibility="visible"/>-->
+<!--        </RelativeLayout>-->
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/TimeBar"
+            android:layout_width="match_parent"
+            android:background="@color/colorPrimaryDark"
+            android:layout_height="35dp">
+            <TextView
+                android:id="@+id/alarmTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:textColor="@color/white"
+                android:layout_gravity="right"
+                tools:text="75 MIN." />
+        </com.google.android.material.appbar.AppBarLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
